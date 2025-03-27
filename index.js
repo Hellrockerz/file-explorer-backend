@@ -33,6 +33,7 @@ db.once('open', () => {
 app.use(express.json());
 app.use(bodyParser.json());
 app.use(express.urlencoded({ extended: false }));
+app.options('*', cors());
 app.use("/images", express.static(path.join(__dirname, "uploads")));
 app.use('/api', routes);
 

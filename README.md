@@ -1,2 +1,5 @@
-This is a project I created from scratch using Node.js and Mongo DB 
-which includes various APIs. Uses 3rd party integration.
+# File Explorer Backend.
+
+## Add the MONGODB_URI in the .env.
+## Use npm i to instal dependencies.
+## Use npm run start to run the server.

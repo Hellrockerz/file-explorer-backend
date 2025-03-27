@@ -7,7 +7,12 @@ const server = http.createServer(app);
 const cors = require("cors");
 const bodyParser = require("body-parser");
 const path = require("path");
-app.use(cors({ origin: '*' }));
+
+app.use(cors({
+  origin: '*', // Allow all origins (for testing) - Change this for security
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  allowedHeaders: ['Content-Type', 'Authorization']
+}));
 
 const port = process.env.PORT || 5000;
 const MONGODB_URI = process.env.MONGODB_URI;
